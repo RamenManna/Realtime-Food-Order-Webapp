@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "5eee651f739f8c674fd736ee"
+  },
+  "name": "Hyderabadi Biriyani",
+  "image": "hydb.jpg",
+  "price": "299",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5eee6671a27a66807cf2bea3"
+  },
+  "name": "Hyderabadi Biriyani",
+  "image": "hydb.jpg",
+  "price": "499",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "5eee6692a27a66807cf2bea4"
+  },
+  "name": "Mix Chawmin",
+  "image": "chawmin.jpg",
+  "price": "199",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5eee66a5a27a66807cf2bea5"
+  },
+  "name": "Mix Chawmin",
+  "image": "pizza.png",
+  "price": "399",
+  "size": "large"
+},{
+  "_id": {
+    "$oid": "5eee66c4a27a66807cf2bea6"
+  },
+  "name": "Chilli Chicken",
+  "image": "chillichicken.jpg",
+  "price": "349",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "5eee66cfa27a66807cf2bea7"
+  },
+  "name": "Mix Fried Rice",
+  "image": "friedrice.jpg",
+  "price": "299",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5eee66eea27a66807cf2bea8"
+  },
+  "name": "Fried Steamed Momo",
+  "image": "momo.jpg",
+  "price": "299",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "5eee6717a27a66807cf2bea9"
+  },
+  "name": "Pepperoni Pizza",
+  "image": "pizza.png",
+  "price": "349",
+  "size": "medium"
+}]
