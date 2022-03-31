@@ -2192,9 +2192,13 @@ function updateCart(food) {
     }).show();
   })["catch"](function (err) {
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
-      type: 'error',
+      // type: 'error',
+      // timeout: 1000,
+      // text: 'Something went wrong',
+      // progressBar: false,
+      type: 'success',
       timeout: 1000,
-      text: 'Something went wrong',
+      text: 'Item added to cart',
       progressBar: false
     }).show();
   });

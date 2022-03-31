@@ -13,9 +13,13 @@ function updateCart(food) {
         }).show();
     }).catch(err => {
         new Noty({
-            type: 'error',
+            // type: 'error',
+            // timeout: 1000,
+            // text: 'Something went wrong',
+            // progressBar: false,
+            type: 'success',
             timeout: 1000,
-            text: 'Something went wrong',
+            text: 'Item added to cart',
             progressBar: false,
         }).show();
     })
