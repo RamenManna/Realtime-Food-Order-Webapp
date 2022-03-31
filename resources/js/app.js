@@ -2,8 +2,8 @@ import axios from 'axios'
 import Noty from 'noty'
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter')
-function updateCart(food) {
-    axios.post('/update-cart', food).then(res => {
+async function updateCart(food) {
+    await axios.post('/update-cart', food).then(res => {
         cartCounter.innerText = res.data.totalQty
         new Noty({
             type: 'success',

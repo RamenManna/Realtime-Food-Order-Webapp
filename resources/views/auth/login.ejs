@@ -1,28 +1,32 @@
-<section class="login flex justify-center pt-20 ">
-
-    <div class="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-8">
+<section class="login flex justify-center pt-24 ">
+<div class="w-full max-w-xs">
+    <form action="/login" method="post" class="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-8">
+        <% if(messages.error){%>
+            <span class="text-red-500 text-sm"><%=messages.error%></span>
+            <% }%>
         <div class="mb-4">
             <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                 Email
             </label>
             <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker" id="username"
-                type="email" placeholder="Enter Your Email">
+                type="email" placeholder="Enter Your Email" name="email">
         </div>
         <div class="mb-6">
             <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
                 Password
             </label>
             <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker mb-3"
-                id="password" type="password" placeholder="******************">
+                id="password" type="password" placeholder="******************" name="password">
             
         </div>
         <div class="flex items-center justify-between">
-            <button class="btn-primary text-white font-bold py-2 px-4 rounded-full" type="button">
+            <button class="btn-primary text-white font-bold py-2 px-4 rounded-full" type="submit">
                 Log In
             </button>
             <a class="inline-block align-baseline font-bold text-sm" href="/register">
                 Don't have Account?
             </a>
         </div>
-    </div>
+    </form>
+</div>
 </section>

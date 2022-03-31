@@ -10,6 +10,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 // const MongoStore = require('connect-mongo')
 const MongoDbStore = require('connect-mongo');
+const passport= require('passport')
 
 //Database Connection
 mongoose.connect("mongodb://localhost:27017/food", {
@@ -27,6 +28,9 @@ connection.once("open", function () {
 //   mongooseConnection: connection,
 //   collection: "sessions",
 // });
+
+
+
 //session config
 app.use(
   session({
@@ -41,7 +45,11 @@ app.use(
     
   })
 );
-
+//passport config
+const passportInit = require('./app/config/passport')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(flash());
 
@@ -54,10 +62,12 @@ app.set("view engine", "ejs");
 //Assests
 
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 //Global middleware
 app.use((req, res, next)=>{
   res.locals.session = req.session
+  res.locals.user= req.user
   next()
 })
 require("./routes/web")(app);

@@ -1,35 +1,39 @@
 <section class="login flex justify-center pt-20 ">
+    <div class="w-full max-w-xs">
+        <form action="/register" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-8">
+           <% if(messages.error){%>
+            <span class="text-red-500 text-sm"><%=messages.error%></span>
+            <% }%>
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                    Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker" id="username"
+                    type="text" name="name" placeholder="Enter Your Name" value="<%=messages.name%>">
+            </div>
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker" id="username"
+                    type="email" name="email" placeholder="Enter Your Email" value="<%=messages.email%>" >
+            </div>
+            <div class="mb-6">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker mb-3"
+                    id="password" name="password" type="password" placeholder="******************">
 
-    <div class="bg-white shadow-md rounded px-12 pt-6 pb-8 mb-8">
-        <div class="mb-4">
-            <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
-                Name
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker" id="username"
-                type="text" placeholder="Enter Your Name">
-        </div>
-        <div class="mb-4">
-            <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
-                Email
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker" id="username"
-                type="email" placeholder="Enter Your Email">
-        </div>
-        <div class="mb-6">
-            <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
-                Password
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-8 text-grey-darker mb-3"
-                id="password" type="password" placeholder="******************">
-            
-        </div>
-        <div class="flex items-center justify-between">
-            <button class="btn-primary text-white font-bold py-2 px-4 rounded-full" type="button">
-                Log In
-            </button>
-            <a class="inline-block align-baseline font-bold text-sm  " href="/login">
-                Already have Account?
-            </a>
-        </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="btn-primary text-white font-bold py-2 px-4 rounded-full" type="submit">
+                    Register
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm  " href="/login">
+                    Already have Account?
+                </a>
+            </div>
+        </form>
     </div>
 </section>
