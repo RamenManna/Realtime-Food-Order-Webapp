@@ -1,9 +1,13 @@
 import axios from 'axios'
 import Noty from 'noty'
+import {initAdmin} from './admin'
+
+
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter')
-async function updateCart(food) {
-    await axios.post('/update-cart', food).then(res => {
+
+function updateCart(food) {
+    axios.post('/update-cart', food).then(res => {
         cartCounter.innerText = res.data.totalQty
         new Noty({
             type: 'success',
@@ -25,6 +29,7 @@ async function updateCart(food) {
     })
 }
 
+
 addToCart.forEach((btn) => {
     btn.addEventListener('click', (e) =>{
         
@@ -33,3 +38,17 @@ addToCart.forEach((btn) => {
         
     })
 })
+
+
+//Remove alert message after x seconds
+const alertMsg = document.querySelector('#success-alert')
+if(alertMsg){
+    setTimeout(()=>{
+        alertMsg.remove()
+    },3000)
+}
+initAdmin()
+
+
+
+

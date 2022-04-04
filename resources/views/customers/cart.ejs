@@ -15,6 +15,25 @@
                 </div>
                 <span class="flex-1"><%=food.qty%></span>
                 <span class="font-bold text-lg">₹<%=food.item.price*food.qty%></span>
+                <!-- <div class="quantity items-end p-0 flex justify-end"> -->
+                  <div class="remove-item ml-12">
+                    <form action="/cart/remove-item" method="POST">
+                      <input type="hidden" name="id" value="<%=food.item._id %>" />
+                      <button
+                        type="submit"
+                        class="
+                          text-gray-800
+                          font-bold
+                          text-sm
+                          uppercase
+                        "
+                      >
+                        Remove
+                      </button>
+                    </form>
+                  </div>
+                <!-- </div> -->
+                <!-- <button class="ml-12" id="deleteCartButton" data-food-id="<%=food.item._id%>">Delete</button> -->
             </div>
             <%}%>
         </div>
@@ -24,16 +43,19 @@
                 <span class="text-lg font-bold">Total Amount</span>
                 <span class="amount text-2xl font-bold ml-2">₹<%=session.cart.totalPrice%></span>
             </div>
+            <%if (user){%>
             <div >
-                <form action="" class="mt-12">
-                    <input class="border border-gray-100 p-2 w-1/2 mb-4" type="text" placeholder="Address" required>
-                    <input class="border border-gray-100 p-2 w-1/2" type="text" placeholder="Phone Number" required>
+                <form action="/orders" method="post" class="mt-12">
+                    <input name="address" class="border border-gray-100 p-2 w-1/2 mb-4" type="text" placeholder="Address" required>
+                    <input name="phone" class="border border-gray-100 p-2 w-1/2" type="text" placeholder="Phone Number" required>
                     <div>
                         <button class="btn-primary px-6 py-2 rounded-full text-white font-bold mt-6" type="submit">Order Now!</button>
                     </div>
                 </form>
             </div>
-            <!-- <a href="" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6">Login to Continue</a> -->
+            <%}else{%>
+            <a href="/login" class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6">Login to Continue</a>
+        <%}%>
         </div>
     </div>
     <% }else{%>

@@ -38,7 +38,20 @@ function cartController() {
         cart.totalPrice = cart.totalPrice + req.body.price
       }
       return res.json({ totalQty: req.session.cart.totalQty })
-    }
+    },
+    deleteItem(req, res) {
+      let cart = req.session.cart;
+      if (!cart.items) {
+        delete req.session.cart;
+      }
+      cart.totalQty = cart.totalQty - req.session.cart.items[req.body.id].qty;
+      cart.totalPrice =
+        cart.totalPrice -
+        req.session.cart.items[req.body.id].item.price *
+          req.session.cart.items[req.body.id].qty;
+      delete req.session.cart.items[req.body.id];
+      return res.redirect("/cart");
+    },
   }
 }
 module.exports = cartController
