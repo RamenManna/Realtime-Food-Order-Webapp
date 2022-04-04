@@ -1,5 +1,5 @@
 # Realtime Food Order App
-##Techstacks used in this project: **Node Js, Express Js, MongoDB, Tailwind CSS, Socket IO, Passport Authentications**</br>
+## Techstacks used in this project: **Node Js, Express Js, MongoDB, Tailwind CSS, Socket IO, Passport Authentications**</br>
 Developing Team: 1) Ramen Manna 2) Soumik Kundu </br>
 To Run these Project used these following Commands :</br>
 yarn install</br>
