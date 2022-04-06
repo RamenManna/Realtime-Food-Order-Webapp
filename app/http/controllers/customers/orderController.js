@@ -1,5 +1,6 @@
 const Order = require('../../../models/order')
 const moment= require('moment')
+const { response } = require('express')
 function orderController (){
     return{
         store(req,res){
@@ -28,6 +29,15 @@ function orderController (){
             const orders = await Order.find({customerId: req.user._id},null,{sort:{'createdAt':-1}})
             res.header('Cache-Control', 'no-store')
             res.render('customers/orders',{orders: orders, moment:moment})
+            
+        },
+        async show(req,res){
+            const order = await Order.findById(req.params.id)
+            //Authorize user 
+            if(req.user._id.toString() ===order.customerId.toString()){
+                return res.render('customers/singleOrder',{order})
+            }
+            return res.redirect('/')
             
         }
     }

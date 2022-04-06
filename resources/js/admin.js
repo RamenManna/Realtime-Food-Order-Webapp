@@ -40,7 +40,7 @@ export function initAdmin() {
                 <td class="border px-4 py-2">${order.phone}</td>
                 <td class="border px-4 py-2">
                     <div class="inline-block relative w-64">
-                        <form action="/admin/order/status" method="POST">
+                        <form action="/admin/orders/status" method="POST">
                             <input type="hidden" name="orderId" value="${order._id
                     }">
                             <select name="status" onchange="this.form.submit()"
