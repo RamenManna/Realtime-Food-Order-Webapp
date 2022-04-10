@@ -2,64 +2,128 @@
   "_id": {
     "$oid": "5eee651f739f8c674fd736ee"
   },
-  "name": "Hyderabadi Biriyani",
+  "name": "Chicken Biryani",
   "image": "hydb.jpg",
-  "price": "299",
+  "price": "179",
   "size": "small"
 },{
   "_id": {
     "$oid": "5eee6671a27a66807cf2bea3"
   },
-  "name": "Hyderabadi Biriyani",
-  "image": "hydb.jpg",
-  "price": "499",
+  "name": "Veg Biryani",
+  "image": "vegbiriyani.jpg",
+  "price": "149",
   "size": "medium"
 },{
   "_id": {
     "$oid": "5eee6692a27a66807cf2bea4"
   },
-  "name": "Mix Chawmin",
-  "image": "chawmin.jpg",
+  "name": "Hyderabadi Kachi Biryani",
+  "image": "hkcb.jpg",
   "price": "199",
   "size": "small"
 },{
   "_id": {
     "$oid": "5eee66a5a27a66807cf2bea5"
   },
-  "name": "Mix Chawmin",
-  "image": "chawmin.jpg",
+  "name": "Ambur Chicken Biryani",
+  "image": "ambur.jpg",
   "price": "399",
   "size": "large"
 },{
   "_id": {
     "$oid": "5eee66c4a27a66807cf2bea6"
   },
-  "name": "Chilli Chicken",
-  "image": "chillichicken.jpg",
+  "name": "Egg Roast Biryani",
+  "image": "eggroastbiriyani.jpg",
   "price": "349",
   "size": "medium"
 },{
   "_id": {
     "$oid": "5eee66cfa27a66807cf2bea7"
   },
-  "name": "Mix Fried Rice",
-  "image": "friedrice.jpg",
+  "name": "Chettynad Chicken Biryani",
+  "image": "chettynad.jpg",
   "price": "299",
-  "size": "small"
+  "size": "medium"
 },{
   "_id": {
     "$oid": "5eee66eea27a66807cf2bea8"
   },
-  "name": "Fried Steamed Momo",
-  "image": "momo.jpg",
+  "name": "Awadhi Biryani",
+  "image": "awadi.jpeg",
   "price": "299",
   "size": "small"
 },{
   "_id": {
     "$oid": "5eee6717a27a66807cf2bea9"
   },
-  "name": "Pepperoni Pizza",
-  "image": "pizza.png",
+  "name": "Malabar Biryani",
+  "image": "malabar.jpg",
+  "price": "349",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "624db116987dccec7b322142"
+  },
+  "name": "Hyderabadi Pakki Biryani",
+  "image": "hpb.jpg",
+  "price": "349",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "6252bcd4be4caa48e77785ea"
+  },
+  "name": "Hyderabadi Mutton Biryani",
+  "image": "hymb.jpg",
+  "price": "349",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "6252bddcbe4caa48e77785eb"
+  },
+  "name": "Fish Biryani",
+  "image": "fb.jpg",
+  "price": "299",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "6252be86be4caa48e77785ec"
+  },
+  "name": "Haleem Biryani",
+  "image": "haleem.jpg",
+  "price": "299",
+  "size": "medium"
+},{
+  "_id": {
+    "$oid": "6252bf94be4caa48e77785ed"
+  },
+  "name": "Prawn Biryani",
+  "image": "prawn.jpg",
+  "price": "199",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "6252c0afbe4caa48e77785ee"
+  },
+  "name": "Soya Chunks Biryani",
+  "image": "soya.jpg",
+  "price": "149",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "6252c1cabe4caa48e77785ef"
+  },
+  "name": "Paneer Biryani",
+  "image": "paneer.jpg",
+  "price": "249",
+  "size": "small"
+},{
+  "_id": {
+    "$oid": "6252c2d7be4caa48e77785f0"
+  },
+  "name": "Mushroom Biryani",
+  "image": "mushroom.jpg",
   "price": "349",
   "size": "medium"
 }]
