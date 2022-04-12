@@ -4,8 +4,8 @@ import {initAdmin} from './admin'
 import moment from 'moment' 
 import { initStripe } from './stripe'
 
-let addToCart = document.querySelectorAll('.add-to-cart')
-let cartCounter = document.querySelector('#cartCounter')
+let addToCart = document.querySelectorAll(".add-to-cart");
+let cartCounter = document.getElementsByClassName("cartCounter");
 
 function updateCart(food) {
     axios.post('/update-cart', food).then(res => {
@@ -18,25 +18,18 @@ function updateCart(food) {
         }).show();
     }).catch(err => {
         new Noty({
-            // type: 'error',
-            // timeout: 1000,
-            // text: 'Something went wrong',
-            // progressBar: false,
-            type: 'success',
+            type: 'error',
             timeout: 1000,
-            text: 'Item added to cart',
+            text: 'Something went wrong',
             progressBar: false,
         }).show();
     })
 }
 
-
 addToCart.forEach((btn) => {
-    btn.addEventListener('click', (e) =>{
-        
-        let food=JSON.parse(btn.dataset.food)
+    btn.addEventListener('click', (e) => {
+        let food = JSON.parse(btn.dataset.food)
         updateCart(food)
-        
     })
 })
 

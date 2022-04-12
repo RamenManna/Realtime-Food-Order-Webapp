@@ -2562,8 +2562,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var addToCart = document.querySelectorAll('.add-to-cart');
-var cartCounter = document.querySelector('#cartCounter');
+var addToCart = document.querySelectorAll(".add-to-cart");
+var cartCounter = document.getElementsByClassName("cartCounter");
 
 function updateCart(food) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', food).then(function (res) {
@@ -2576,13 +2576,9 @@ function updateCart(food) {
     }).show();
   })["catch"](function (err) {
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
-      // type: 'error',
-      // timeout: 1000,
-      // text: 'Something went wrong',
-      // progressBar: false,
-      type: 'success',
+      type: 'error',
       timeout: 1000,
-      text: 'Item added to cart',
+      text: 'Something went wrong',
       progressBar: false
     }).show();
   });
