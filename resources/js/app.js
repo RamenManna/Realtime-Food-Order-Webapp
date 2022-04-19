@@ -23,6 +23,7 @@ function updateCart(food) {
             text: 'Something went wrong',
             progressBar: false,
         }).show();
+        setTimeout(location.reload.bind(location),2000);
     })
 }
 
